@@ -1,0 +1,28 @@
+@import url("./normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&display=swap');
+
+
+:root {
+    --color-button_Go: rgba(255, 64, 64, 0.53);
+    --color-button_Go-white: #eee;
+    --color-border-button_go: rgba(0, 0, 0, 0.705);
+
+
+    --color-background-principal: #2b292c;
+    --color-background-header: #d53b47;
+    --color-background-filter: rgba(155, 155, 155, 0.801);
+    --color-cards: #f8a060;
+}
+h1,h2,h3,h4 {
+    font-family: 'Source Serif Pro', serif;
+}
+h3 {
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

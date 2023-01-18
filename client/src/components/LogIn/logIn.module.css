@@ -1,0 +1,47 @@
+.log_in {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../img/High_resolution_wallpaper_background_ID_77700090216.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.button {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translate(-50%,-50%);
+    width: 6em;
+    height: 6em;
+    outline: none;
+    border: 2px solid var(--color-border-button_go);
+    border-radius: 50%;
+    background: var(--color-button_Go);
+    backdrop-filter: blur(1px);
+    animation: fall 1s ease-in-out,
+               shake 2s cubic-bezier(.36,.07,.19,.97) infinite,
+               blink 2s infinite;
+    cursor: pointer;
+}
+  /* Animation */
+  @keyframes blink {
+    0% { background: var(--color-button_Go-white);}
+    50% { background: var(--color-button_Go); }
+    100% {background: var(--color-button_Go-white);}
+  }
+  @keyframes shake {
+    0% { transform: translate(0, 0) rotate(0); }
+    30% { transform: translate(-10px, 0) rotate(-20deg); }
+    40% { transform: translate(10px, 0) rotate(20deg); }
+    50% { transform: translate(-10px, 0) rotate(-10deg); }
+    70% { transform: translate(10px, 0) rotate(10deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+  @keyframes fall {
+    0% { top: -400px }
+    40% {top: 50% }
+    60% { top: 30% }
+    80% { top: 50% }
+    90% {top: 45%}
+    100% { top: 50% }
+  }

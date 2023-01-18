@@ -1,0 +1,169 @@
+form {
+  text-align: center;
+  width: 390px;
+}
+.container_create {
+  background-color: var(--color-background-principal);
+  height: auto;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.check {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  appearance: none;
+  background-color: #bbb;
+  transition: all 0.3s;
+}
+
+.check::before {
+  content: "";
+  position: absolute;
+  border: solid #fff;
+  display: block;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  z-index: 1;
+  opacity: 0;
+  right: calc(50% - 0.3em);
+  top: calc(50% - 0.6em);
+  transform: rotate(0deg);
+  transition: all 0.3s;
+  transform-origin: center center;
+}
+
+.check:checked {
+  animation: a 0.3s ease-in forwards;
+  background-color: rgb(120, 190, 120);
+}
+
+.check:checked::before {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+.conainer_inps {
+  margin: 0;
+  text-align: center;
+}
+.inps {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.types {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container_type {
+  width: 4em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  /* background-color: aqua; */
+  text-align: center;
+}
+.label {
+  margin-bottom: 0.2em;
+}
+.submit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 10em;
+  height: 3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: #fff;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.submit:hover {
+  opacity: 1;
+}
+.submit:disabled {
+  cursor: no-drop;
+  opacity: 0.3;
+}
+
+.inps_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #bbb;
+}
+.inp {
+  border: none;
+  outline: none;
+  border-radius: 0.2em;
+  height: 1.7em;
+  padding: 1em;
+  margin: 0.2em;
+  margin-bottom: 0;
+}
+
+/* Errors  */
+.error_inp {
+  border: none;
+  outline: none;
+  border-radius: 0.2em;
+  height: 1.7em;
+  margin: 0.2em;
+  padding: 1em;
+  outline: 2px solid #da3125;
+}
+.error_span {
+  margin: 0;
+  border-radius: 0.2em;
+  background-color: #fae3e1;
+  color: #5c5c5c;
+  animation: error_span 0.4s;
+  padding: 0.1em;
+}
+@media (min-width: 1200px) {
+  .conainer_inps {
+    margin: 0 10em;
+  }
+  .types {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@keyframes error_span {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 1.7em;
+  }
+}
+
+@keyframes a {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(0.8) rotateY(180deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(360deg);
+  }
+}

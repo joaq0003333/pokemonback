@@ -1,0 +1,145 @@
+.nav_bar{
+  position: absolute;
+}
+.slide_bar {
+    position: fixed;
+    animation-name: navBar_slide_bar__21ju0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    background: #fff;
+    width: 40vw;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slide_bar_open 1s;
+    padding-top: 4em;
+}
+
+
+.button_exit {
+    position: absolute;
+    bottom: 50px;
+    background: none;
+    border: solid 1px #000000;
+    transition: linear 250ms;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+  }
+  
+  .button_exit:is(:hover,:focus) {
+    color: #fff;
+  }
+  
+  .button_exit::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    z-index: -1;
+    background-color: #121212;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: linear 250ms;
+  }
+  
+  .button_exit:is(:hover, :focus)::after {
+    transform: scale(1);
+  }
+
+.close{
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+
+}
+
+.open {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    color: rgb(252, 252, 252);
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.create_pokemon{
+
+  position: absolute;
+  top: 250px;
+  background: none;
+  border: solid 1px #000000;
+  transition: linear 250ms;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+
+}
+.create_pokemon::after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  z-index: -1;
+  background-color: #122e7bae;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: linear 250ms;
+}
+.create_pokemon:is(:hover, :focus)::after {
+  transform: scale(1);
+}
+
+.link{
+  text-decoration: none;
+  color: #000000;
+
+}
+.home {
+  position: absolute;
+  top: 140px;
+  background: none;
+  border: solid 1px #000000;
+  transition: linear 250ms;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.home::after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  z-index: -1;
+  background-color: #875328ae;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: linear 250ms;
+}
+.home:is(:hover, :focus)::after {
+  transform: scale(1);
+}
+
+@keyframes slide_bar_open {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 40vw;
+    }
+} 

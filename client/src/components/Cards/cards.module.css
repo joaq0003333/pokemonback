@@ -1,0 +1,29 @@
+.container_cards{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.cards {
+    min-width: 100vw;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.button {
+    margin: .5em;
+    width: 70%;
+    padding: .3em;
+    background-color: rgb(91, 186, 87);
+    border-radius: .2em;
+}
+.container_buttons {
+    margin: 10px 30px;
+    display: flex;
+    padding: 0;
+    max-width: 30em;
+}
